@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile has a profile pic and username 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+>
+  <div
+    className="MuiAvatar-root makeStyles-avatar-1"
+  >
+    <img
+      alt="JohnSmith"
+      className="MuiAvatar-img"
+      src="profile-image.png"
+    />
+  </div>
+  <p
+    className="MuiTypography-root MuiTypography-body1"
+  />
+</div>
+`;
