@@ -2,6 +2,8 @@ import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from '@material-ui/core/styles';
 
+import ListHeader from 'components/ListHeader';
+import TodoLists from 'components/TodoLists';
 import UserProfile from 'components/UserProfile';
 
 const App = () => {
@@ -36,9 +38,12 @@ const App = () => {
           open
         >
           <UserProfile userName="Guglielmo Marconi" />
+          <TodoLists />
         </Drawer>
       </nav>
-      <main className={classes.content}>hello world</main>
+      <main className={classes.content}>
+        <ListHeader title="Team To-Do List" subtitle="Monday 1 July" />
+      </main>
     </div>
   );
 };
