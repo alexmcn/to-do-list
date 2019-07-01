@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListHeader has a title and subtitle 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <h2
+    className="MuiTypography-root MuiTypography-h3 MuiTypography-colorInherit MuiTypography-gutterBottom"
+  >
+    Team To-Do List
+  </h2>
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit MuiTypography-gutterBottom"
+  >
+    Monday 1 July
+  </p>
+</div>
+`;
