@@ -2,6 +2,7 @@ import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from '@material-ui/core/styles';
 
+import AddTodo from 'components/AddTodo';
 import ListHeader from 'components/ListHeader';
 import TodoLists from 'components/TodoLists';
 import TodoList from 'components/TodoList';
@@ -45,6 +46,7 @@ const App = () => {
       <main className={classes.content}>
         <ListHeader title="Team To-Do List" subtitle="Monday 1 July" />
         <TodoList />
+        <AddTodo />
       </main>
     </div>
   );

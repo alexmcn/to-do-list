@@ -1,6 +1,26 @@
 import reducer from './reducer';
 
 describe('reducer', () => {
+  it('adds a todo', () => {
+    const state = {
+      todoLists: [],
+      todos: [
+        { id: 1, title: 'to do a', todoListId: '1', isDone: true },
+        { id: 2, title: 'to do b', todoListId: '1' },
+      ],
+    };
+    const newState = reducer(state, {
+      type: 'ADD_TODO',
+      payload: { id: 3, title: 'to do c', todoListId: '2' },
+    });
+
+    expect(newState.todos).toEqual([
+      { id: 1, title: 'to do a', todoListId: '1', isDone: true },
+      { id: 2, title: 'to do b', todoListId: '1' },
+      { id: 3, title: 'to do c', todoListId: '2' },
+    ]);
+  });
+
   it('deletes a todo', () => {
     const state = {
       todoLists: [],
