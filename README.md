@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Tweak styling to match original design.
 - Visually delineate completed items as being different from non-completed items
+- Make drawer collapse on mobile screens
 - Increase test coverage especially list item component
 - move actions into store and out of component containers
 - end to end tests
