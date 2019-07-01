@@ -1,5 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
+
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
@@ -8,11 +9,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const useStyles = makeStyles(theme => ({}));
-
-const TodoListItem = ({ id, isDone, title, onToggleComplete }) => {
-  const classes = useStyles();
-
+const TodoListItem = ({ id, isDone, title, onDelete, onToggleComplete }) => {
   const labelId = `checkbox-list-label-${id}`;
 
   return (
@@ -27,13 +24,21 @@ const TodoListItem = ({ id, isDone, title, onToggleComplete }) => {
         />
       </ListItemIcon>
       <ListItemText id={labelId} primary={title} />
-      <ListItemSecondaryAction>
+      <ListItemSecondaryAction onClick={onDelete}>
         <IconButton edge="end" aria-label="Comments">
           <DeleteIcon />
         </IconButton>
       </ListItemSecondaryAction>
     </ListItem>
   );
+};
+
+TodoListItem.propTypes = {
+  id: PropTypes.string,
+  isDone: PropTypes.bool,
+  title: PropTypes.string,
+  onDelete: PropTypes.func,
+  onToggleComplete: PropTypes.func,
 };
 
 export default TodoListItem;

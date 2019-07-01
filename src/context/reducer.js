@@ -1,5 +1,10 @@
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'DELETE_TODO':
+      return {
+        ...state,
+        todos: state.todos.filter(todo => todo.id !== action.payload.id),
+      };
     case 'TOGGLE_TODO':
       return {
         ...state,
