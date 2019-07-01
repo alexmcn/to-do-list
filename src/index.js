@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
+import { TodosProvider } from './context';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './index.css';
+import App from 'components/App';
+
+ReactDOM.render(
+  <TodosProvider>
+    <App />
+  </TodosProvider>,
+  document.getElementById('root')
+);
