@@ -23,7 +23,10 @@ const TodoListItem = ({ id, isDone, title, onDelete, onToggleComplete }) => {
           inputProps={{ 'aria-labelledby': labelId }}
         />
       </ListItemIcon>
-      <ListItemText id={labelId} primary={title} />
+      <ListItemText
+        id={labelId}
+        primary={`${title} ${isDone ? '[Done]' : ''}`}
+      />
       <ListItemSecondaryAction onClick={onDelete}>
         <IconButton edge="end" aria-label="Comments">
           <DeleteIcon />

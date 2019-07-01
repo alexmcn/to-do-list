@@ -16,8 +16,6 @@ const TodoList = ({ todos }) => {
   const classes = useStyles();
   if (!todos || !todos.length) return null;
 
-  console.log(todos);
-
   return (
     <List className={classes.root}>
       {todos.map(todo => (
