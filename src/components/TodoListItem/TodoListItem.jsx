@@ -10,13 +10,13 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles(theme => ({}));
 
-const TodoListItem = ({ id, isDone, title }) => {
+const TodoListItem = ({ id, isDone, title, onToggleComplete }) => {
   const classes = useStyles();
 
   const labelId = `checkbox-list-label-${id}`;
 
   return (
-    <ListItem role={undefined} dense button>
+    <ListItem role={undefined} dense button onClick={onToggleComplete}>
       <ListItemIcon>
         <Checkbox
           edge="start"

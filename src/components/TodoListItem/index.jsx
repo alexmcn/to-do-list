@@ -3,7 +3,14 @@ import { TodosContext } from 'context';
 import Component from './TodoListItem';
 
 export default ({ id }) => {
-  const { state } = useContext(TodosContext);
+  const { state, dispatch } = useContext(TodosContext);
+
+  const handleToggleComplete = () => {
+    dispatch({
+      type: 'TOGGLE_TODO',
+      payload: { id },
+    });
+  };
 
   const todo = state.todos.find(todo => {
     return todo.id === id;
@@ -11,5 +18,12 @@ export default ({ id }) => {
 
   if (!todo) return null;
 
-  return <Component id={id} isDone={todo.isDone} title={todo.title} />;
+  return (
+    <Component
+      id={id}
+      isDone={todo.isDone}
+      title={todo.title}
+      onToggleComplete={handleToggleComplete}
+    />
+  );
 };
