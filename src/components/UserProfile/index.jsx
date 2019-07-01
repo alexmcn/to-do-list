@@ -21,7 +21,7 @@ const UserProfile = ({ userName }) => {
   return (
     <Grid container alignItems="center">
       <Avatar alt={userName} src={ProfileImage} className={classes.avatar} />
-      <Typography />
+      <Typography>{userName}</Typography>
     </Grid>
   );
 };

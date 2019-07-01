@@ -15,6 +15,8 @@ exports[`UserProfile has a profile pic and username 1`] = `
   </div>
   <p
     className="MuiTypography-root MuiTypography-body1"
-  />
+  >
+    JohnSmith
+  </p>
 </div>
 `;
