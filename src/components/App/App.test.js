@@ -1,9 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import renderer from 'react-test-renderer';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import App from './index';
+
+describe('App', () => {
+  it('renders without crashing', () => {
+    const instance = renderer.create(<App />);
+
+    expect(instance.toJSON()).toMatchSnapshot();
+  });
 });
